@@ -1,0 +1,7 @@
+<app-nav-bar [user]="user"></app-nav-bar>
+<div style="margin-top: 55px" class="container">
+  <app-new-tweet [user]="user"></app-new-tweet>
+
+  <app-tweet *ngFor="let tweet of feed" [tweet]="tweet"></app-tweet>
+</div>
+

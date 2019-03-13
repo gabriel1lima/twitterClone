@@ -1,0 +1,43 @@
+{
+  "feed": [{
+      "user": {
+        "id": 0,
+        "name": "Gabriel Lima",
+        "nick": "GabrielLima56",
+        "imgProfile": "https://avatars2.githubusercontent.com/u/41576660?s=400&u=b4e5b1e4a5b7ed4a51d7fe91061921e9fc014fba&v=4"
+      },
+      "content": "Lorem ipsum primis lectus ut nec quis enim accumsan nam mollis",
+      "comments": 130,
+      "retweets": 40,
+      "likes": 150,
+      "img": "https://pbs.twimg.com/media/D1fzFlZW0AEiXVF.jpg",
+      "id": 0
+    },
+    {
+      "user": {
+        "id": 1,
+        "name": "Lorran Cayck",
+        "nick": "cayck-lorran",
+        "imgProfile": "https://randomuser.me/api/portraits/men/60.jpg"
+      },
+      "content": "Lorem ipsum primis lectus ut nec quis enim accumsan nam mollis facilisis etiam sollicitudin imperdiet, lacus eget quis sodales libero blandit egestas faucibus nam proin rhoncus elementum. dapibus erat suscipit suspendisse augue sapien massa inceptos felis tempor nibh pharetra, sollicitudin sociosqu ultricies nec a vitae orci netus egestas vivamus, orci consectetur vivamus convallis aenean euismod aptent ornare placerat mattis.",
+      "comments": 125,
+      "retweets": 27,
+      "likes": 200,
+      "img": "",
+      "id": 1
+    }
+  ],
+  "users": [{
+    "id": 0,
+    "name": "Gabriel Lima",
+    "nick": "GabrielLima56",
+    "imgProfile": "https://avatars2.githubusercontent.com/u/41576660?s=400&u=b4e5b1e4a5b7ed4a51d7fe91061921e9fc014fba&v=4"
+  }, {
+    "id": 1,
+    "name": "Lorran Cayck",
+    "nick": "cayck-lorran",
+    "imgProfile": "https://randomuser.me/api/portraits/men/60.jpg"
+  }]
+
+}

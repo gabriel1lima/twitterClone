@@ -1,0 +1,17 @@
+.borderBottom {
+  border-bottom-style: solid;
+  border-color: #1da1f2;
+}
+
+.fontHelvetica {
+  font-family: 'Helvetica Neue Bold';
+  font-weight: bold;
+  font-size: 13px;
+  /* color: #1da1f2 */
+}
+.iconNavBar {
+  font-size: 18px;
+}
+::placeholder{
+  font-size: 12px
+}

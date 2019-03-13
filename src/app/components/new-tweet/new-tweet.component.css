@@ -1,0 +1,13 @@
+::placeholder {
+  color: #0797FF
+}
+
+.image-icon {
+  position: absolute !important;
+  right: 20px;
+	top: 10px;
+}
+
+.icon-input {
+	padding-right: 60px !important;
+}

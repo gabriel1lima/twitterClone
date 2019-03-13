@@ -1,0 +1,47 @@
+<nav style="height: 46px;" class="navbar fixed-top navbar-expand-lg navbar-light bg-white shadow-sm">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse ml-5" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item borderBottom mt-1 mr-4" style="padding-bottom: 3px">
+        <a class="nav-link text-primary fontHelvetica d-flex align-items-center" href="#">
+          <i class="fas fa-home iconNavBar mr-2"></i>
+          <span> Página Inicial</span>
+        </a>
+      </li>
+      <li class="nav-item mt-1 mr-4">
+        <a class="nav-link fontHelvetica d-flex align-items-center" href="#">
+          <i class="fas fa-bolt iconNavBar mr-2"></i>
+          <span> Moments</span>
+        </a>
+      </li>
+      <li class="nav-item mt-1 mr-4">
+        <a class="nav-link fontHelvetica d-flex align-items-center" href="#">
+          <i class="fas fa-bell iconNavBar mr-2"></i>
+          <span> Notificações</span>
+        </a>
+      </li>
+      <li class="nav-item mt-1 mr-4">
+        <a class="nav-link fontHelvetica d-flex align-items-center" href="#">
+          <i class="fas fa-envelope iconNavBar mr-2"></i>
+          <span> Mensagens</span>
+        </a>
+      </li>
+      <li class="nav-item mt-1 ml-5">
+        <a class="nav-link fontHelvetica d-flex align-items-center" href="#">
+          <i style="color:  #4AB3F4" class="fab fa-twitter iconNavBar"></i>
+        </a>
+      </li>
+    </ul>
+    <form class="form-inline mr-5 my-2 my-lg-0">
+      <input style="height: 33px; background-color: #F5F8FA" class="form-control mr-sm-2 rounded-pill" type="search"
+        placeholder="Buscar no Twitter" aria-label="Search">
+      <img src="{{user?.imgProfile}}" alt="" style="height: 33px;" class="rounded-circle mx-auto d-block img-fluid">
+      <button style="height: 33px; background-color: #4AB3F4" class="btn text-white rounded-pill px-3 my-2 ml-2 my-sm-0 fontHelvetica"
+        type="submit">Tweetar</button>
+    </form>
+  </div>
+</nav>
