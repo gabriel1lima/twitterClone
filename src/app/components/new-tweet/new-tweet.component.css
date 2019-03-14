@@ -1,13 +1,15 @@
 ::placeholder {
-  color: #0797FF
+  color: #0797FF;
+  font-size: 14px;
+  font-family: "Helvetica";
 }
 
 .image-icon {
   position: absolute !important;
   right: 20px;
-	top: 10px;
+  top: 10px;
 }
 
 .icon-input {
-	padding-right: 60px !important;
+  padding-right: 60px !important;
 }

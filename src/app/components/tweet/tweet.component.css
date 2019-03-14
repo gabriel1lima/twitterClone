@@ -1,0 +1,24 @@
+.fontSize>span {
+  font-size: 12px;
+  font-weight: bold
+}
+
+.fontSize>span>i {
+  font-size: 14px
+}
+
+.likeHover:hover {
+  color: #E34073
+}
+
+.like {
+  color: #E34073;
+}
+
+.commentHover:hover {
+  color: #1da1f2;
+}
+
+.retweetHover:hover {
+  color: #17bf63;
+}

@@ -1,11 +1,14 @@
 <div class="row justify-content-center">
   <div class="col-md-6" style="background-color: #E8F5FD">
-    <div class="input-group my-2 pl-3">
-      <div class="input-group-prepend d-flex align-items-center mr-2">
-        <img src="{{user?.imgProfile}}" alt="" style="height: 30px;" class="rounded-circle mx-auto d-block img-fluid">
+    <form (ngSubmit)="onSubmit(textTweet.value); textTweet.value= ''">
+      <div class="input-group my-2 pl-3">
+        <div class="input-group-prepend d-flex align-items-center mr-2">
+          <img src="{{user?.imgProfile}}" alt="" style="height: 30px;" class="rounded-circle mx-auto d-block img-fluid">
+        </div>
+        <input #textTweet type="text" class="icon-input form-control text-primary" style="border-radius: 7px;"
+          placeholder="O que está acontecendo?">
+        <span class="far fa-images image-icon text-primary"></span>
       </div>
-      <input type="text" class="icon-input form-control text-primary" style="border-radius: 10px" placeholder="O que está acontecendo?">
-      <span class="far fa-images image-icon text-primary"></span>
-    </div>
+    </form>
   </div>
 </div>
