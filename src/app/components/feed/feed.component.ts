@@ -20,8 +20,12 @@ export class FeedComponent implements OnInit {
     this.tweetService.getFeed().subscribe(feed => (this.feed = feed));
   }
 
+  getUserStorage(): string {
+    return localStorage.getItem("@cloneTwitter:username");
+  }
+
   getUser(): void {
-    var nick = localStorage.getItem("@cloneTwitter:username");
+    var nick = this.getUserStorage()
     this.tweetService
       .getUser(nick)
       .subscribe(user => ((this.user = user[0]), this.getFeed()));

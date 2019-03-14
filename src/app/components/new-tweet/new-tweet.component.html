@@ -1,14 +1,31 @@
 <div class="row justify-content-center">
   <div class="col-md-6" style="background-color: #E8F5FD">
-    <form (ngSubmit)="onSubmit(textTweet.value); textTweet.value= ''">
+    <form (ngSubmit)="onSubmit();">
       <div class="input-group my-2 pl-3">
         <div class="input-group-prepend d-flex align-items-center mr-2">
           <img src="{{user?.imgProfile}}" alt="" style="height: 30px;" class="rounded-circle mx-auto d-block img-fluid">
         </div>
-        <input #textTweet type="text" class="icon-input form-control text-primary" style="border-radius: 7px;"
-          placeholder="O que está acontecendo?">
-        <span class="far fa-images image-icon text-primary"></span>
+
+        <textarea (blur)="blurInputText()" (click)="clickInputText()" rows="1" id="textTweet" class="form-control form-control-right text-primary" style="border-bottom-left-radius: 7px; border-top-left-radius: 7px; resize: none"
+          placeholder="O que está acontecendo?"></textarea>
+        <div *ngIf="!inputImage" class="input-group-append">
+          <span (click)="clickButtonImagem()" style="border-bottom-right-radius: 7px; border-top-right-radius: 7px"
+            class="input-group-text bg-white">
+            <i class="far fa-images text-primary"></i>
+          </span>
+        </div>
       </div>
+
+      <div *ngIf="inputImage" class="input-group mb-2" style="padding-left: 3.4rem!important;">
+        <div class="input-group-prepend">
+          <span style="border-bottom-left-radius: 7px; border-top-left-radius: 7px" class="input-group-text bg-white">
+            <i class="far fa-images text-primary"></i>
+          </span>
+        </div>
+        <input id="urlImagem" type="text" class="form-control form-control-left text-primary" style="border-bottom-right-radius: 7px; border-top-right-radius: 7px"
+          placeholder="URL da imagem. Ex: https://site.com.br/uploads/2018/03/carro.png">
+      </div>
+      <button type="submit" style="display:none">hidden submit</button>
     </form>
   </div>
 </div>

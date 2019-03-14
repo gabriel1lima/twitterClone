@@ -34,11 +34,26 @@ export class TweetService {
       .pipe(tap(_ => console.log("create tweet")));
   }
 
+  /* POST - Cria retweet */
+  createRetweet(tweet: object): Observable<any> {
+    return this.http
+      .post(this.baseUrlFeed, tweet, this.httpOptions)
+      .pipe(tap(_ => console.log("create retweet")));
+  }
+
   /* PUT - Da like em tweet */
   likeTweet(tweet: object): Observable<any> {
     return this.http
       .put(this.baseUrlFeed + `/${tweet["id"]}`, tweet, this.httpOptions)
       .pipe(tap(_ => console.log("create tweet")));
+  }
+
+  /* DELETE - Apaga um tweet */
+  deleteTweet(idTweet: number): Observable<any> {
+    return this.http.delete(this.baseUrlFeed + `/${idTweet}`)
+      .pipe(
+        tap(_ => console.log("delete tweet")),
+      )
   }
 
   constructor(private http: HttpClient) {}
