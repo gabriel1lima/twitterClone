@@ -1,6 +1,18 @@
 <app-nav-bar [user]="user"></app-nav-bar>
-<div style="margin-top: 55px" class="container">
-  <app-new-tweet [user]="user"></app-new-tweet>
 
-  <app-tweet *ngFor="let tweet of feed" [tweet]="tweet"></app-tweet>
+<div style="margin-top: 55px" class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-3">
+      <div style="background-color: white; height: 200px;"></div>
+    </div>
+
+    <div class="col-md-6">
+      <app-new-tweet [user]="user"></app-new-tweet>
+      <app-tweet *ngFor="let tweet of feed" [tweet]="tweet"></app-tweet>
+    </div>
+
+    <div class="col-md-3">
+      <div style="background-color: white; height: 200px;"></div>
+    </div>
+  </div>
 </div>

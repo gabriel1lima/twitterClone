@@ -1,13 +1,13 @@
-<div class="row justify-content-center">
-  <div class="col-md-6" style="background-color: #E8F5FD">
+<div class="row">
+  <div class="col-md-12" style="background-color: #E8F5FD">
     <form (ngSubmit)="onSubmit();">
       <div class="input-group my-2 pl-3">
         <div class="input-group-prepend d-flex align-items-center mr-2">
           <img src="{{user?.imgProfile}}" alt="" style="height: 30px;" class="rounded-circle mx-auto d-block img-fluid">
         </div>
 
-        <textarea (blur)="blurInputText()" (click)="clickInputText()" rows="1" id="textTweet" class="form-control form-control-right text-primary" style="border-bottom-left-radius: 7px; border-top-left-radius: 7px; resize: none"
-          placeholder="O que está acontecendo?"></textarea>
+        <textarea (blur)="blurInputText()" (click)="clickInputText()" rows="1" id="textTweet" class="form-control form-control-right text-primary"
+          style="border-bottom-left-radius: 7px; border-top-left-radius: 7px; resize: none" placeholder="O que está acontecendo?"></textarea>
         <div *ngIf="!inputImage" class="input-group-append">
           <span (click)="clickButtonImagem()" style="border-bottom-right-radius: 7px; border-top-right-radius: 7px"
             class="input-group-text bg-white">

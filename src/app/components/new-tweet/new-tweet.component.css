@@ -4,11 +4,6 @@
   font-family: "Helvetica";
 }
 
-.image-icon {
-  position: absolute !important;
-  right: 20px;
-  top: 10px;
-}
 .form-control:focus {
   box-shadow: none;
   border-color: #ced4da;
@@ -19,10 +14,6 @@
 }
 .form-control-left{
   border-left: none
-}
-
-.icon-input {
-  padding-right: 60px !important;
 }
 
 textarea:focus {
