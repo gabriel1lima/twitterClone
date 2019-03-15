@@ -9,6 +9,7 @@ import { FeedComponent } from "./components/feed/feed.component";
 import { NewTweetComponent } from "./components/new-tweet/new-tweet.component";
 import { NavBarComponent } from "./components/nav-bar/nav-bar.component";
 import { LoginComponent } from "./components/login/login.component";
+import { CardProfileComponent } from './components/card-profile/card-profile.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { LoginComponent } from "./components/login/login.component";
     FeedComponent,
     NewTweetComponent,
     NavBarComponent,
-    LoginComponent
+    LoginComponent,
+    CardProfileComponent
   ],
   imports: [
     BrowserModule,
