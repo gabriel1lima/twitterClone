@@ -1,0 +1,42 @@
+<!-- Modal -->
+<div class="modal fade" id="{{tweet.user?.nick}}{{tweet?.id}}" tabindex="-1" role="dialog" [attr.aria-labelledby]="tweet.user?.nick + tweet?.id"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <span class="w-100 fontHelveticaBold" style="font-size: 18px" id="exampleModalCenterTitle">Responder para
+          {{tweet.user.name}}</span>
+
+        <button type="button" class="close float-right" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <app-tweet [isComment]="true" [tweet]="tweet"></app-tweet>
+      </div>
+      <div class="footer">
+        <div class="row">
+          <div class="col-md-12" style="background-color: #E8F5FD">
+            <div style="font-size: 14px" class="mt-2">
+              <span class="text-secondary">Em resposta a </span>
+              <span style="color: #1DA1F2">@{{tweet.user.nick}}</span>
+
+            </div>
+            <form (ngSubmit)="onSubmit();">
+              <div class="input-group my-2">
+                <textarea autofocus id="textTweet" class="form-control text-primary"
+                  style="border-radius: 7px; resize: none" placeholder="Tweete sua resposta"></textarea>
+              </div>
+
+
+              <button style="height: 33px; background-color: #4AB3F4" class="btn text-white float-right rounded-pill px-3 mb-2 fontHelveticaBold"
+                type="submit">
+                Responder
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

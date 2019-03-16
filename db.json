@@ -55,47 +55,10 @@
       "content": "Dapibus erat suscipit suspendisse augue sapien massa inceptos felis tempor nibh pharetra, sollicitudin sociosqu ultricies nec",
       "comments": 0,
       "retweets": 0,
-      "likes": 0,
+      "likes": 1,
       "img": "",
       "created_at": "2019-03-14T01:50:10.522Z",
       "id": 4
-    },
-    {
-      "user": {
-        "id": 0,
-        "name": "Gabriel Lima",
-        "nick": "GabrielLima56",
-        "imgProfile": "https://avatars2.githubusercontent.com/u/41576660?s=400&u=b4e5b1e4a5b7ed4a51d7fe91061921e9fc014fba&v=4"
-      },
-      "content": "wefowefoiewrf",
-      "img": "https://pbs.twimg.com/media/D1oRh9YX4AE_SXO.jpg",
-      "comments": 0,
-      "retweets": 0,
-      "likes": 1,
-      "created_at": "2019-03-15T20:23:09.512Z",
-      "id": 5
-    },
-    {
-      "user": {
-        "id": 1,
-        "name": "Lorran Cayck",
-        "nick": "cayck-lorran",
-        "imgProfile": "https://randomuser.me/api/portraits/men/60.jpg"
-      },
-      "content": "Dapibus erat suscipit suspendisse augue sapien massa inceptos felis tempor nibh pharetra, sollicitudin sociosqu ultricies nec",
-      "comments": 0,
-      "retweets": 1,
-      "likes": 0,
-      "img": "",
-      "created_at": "2019-03-15T20:23:16.556Z",
-      "id": 6,
-      "retweet": true,
-      "userRetweet": {
-        "id": 0,
-        "name": "Gabriel Lima",
-        "nick": "GabrielLima56",
-        "imgProfile": "https://avatars2.githubusercontent.com/u/41576660?s=400&u=b4e5b1e4a5b7ed4a51d7fe91061921e9fc014fba&v=4"
-      }
     }
   ],
   "users": [

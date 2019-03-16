@@ -9,6 +9,7 @@ import { FeedComponent } from "../feed/feed.component";
 export class TweetComponent implements OnInit {
   @Input() tweet: object;
   userLogado: string;
+  @Input() isComment: boolean = false;
   
   ngOnInit() {
     this.userLogado = this.feed.getUserStorage()

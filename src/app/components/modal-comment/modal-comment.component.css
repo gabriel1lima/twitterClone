@@ -1,0 +1,39 @@
+.modal-lg {
+  max-width: 590px;
+}
+
+.modal-body {
+  padding: 0;
+  margin-right: 1rem;
+  margin-left: 1rem
+}
+
+.footer {
+  padding: 0;
+  margin-right: 1rem;
+  margin-left: 1rem
+}
+
+.modal-header {
+  height: 49px;
+  padding: 10px 16px 0px 16px;
+  border: none
+}
+
+
+
+
+::placeholder {
+  color: #BAC6CE;
+  font-size: 14px;
+  font-family: "Helvetica";
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: #ced4da;
+}
+
+textarea {
+  height: 80px
+}
