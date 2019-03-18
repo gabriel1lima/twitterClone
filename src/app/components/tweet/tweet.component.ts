@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 import { TweetService } from "../../tweet.service";
 import { FeedComponent } from "../feed/feed.component";
 @Component({
@@ -10,7 +10,13 @@ export class TweetComponent implements OnInit {
   @Input() tweet: object;
   userLogado: string;
   @Input() isComment: boolean = false;
+
+  @Output() modalChange = new EventEmitter();
   
+  modalChanged(){
+    this.modalChange.emit(this.tweet);
+  }
+
   ngOnInit() {
     this.userLogado = this.feed.getUserStorage()
   }

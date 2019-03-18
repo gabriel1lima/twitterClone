@@ -11,7 +11,9 @@
 
     <div class="col-md-6">
       <app-new-tweet [user]="user"></app-new-tweet>
-      <app-tweet *ngFor="let tweet of feed" [tweet]="tweet"></app-tweet>
+      <app-tweet (modalChange)='emitterTweet($event)' *ngFor="let tweet of feed" [tweet]="tweet"></app-tweet>
+
+      <app-modal-comment [tweet]="tweetModal"></app-modal-comment>
     </div>
 
     <div class="col-md-3">

@@ -1,33 +1,78 @@
 <!-- Modal -->
-<div class="modal fade" id="{{tweet.user?.nick}}{{tweet?.id}}" tabindex="-1" role="dialog" [attr.aria-labelledby]="tweet.user?.nick + tweet?.id"
+<div class="modal fade" id="{{tweet?.user?.nick}}{{tweet?.id}}" tabindex="-1" role="dialog" [attr.aria-labelledby]="tweet?.user?.nick + tweet?.id"
   aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
         <span class="w-100 fontHelveticaBold" style="font-size: 18px" id="exampleModalCenterTitle">Responder para
-          {{tweet.user.name}}</span>
+          {{tweet?.user.name}}</span>
 
         <button type="button" class="close float-right" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <app-tweet [isComment]="true" [tweet]="tweet"></app-tweet>
+
+        <div class="row justify-content-center">
+          <div class="col-md-12 border-top bg-white">
+            <div *ngIf="tweet?.retweet" class="row justify-content-center">
+              <div style="padding: 5px 0px 0px 0px" class="col-md-12">
+                <span style="font-size: 12px; margin-left: 50px;" class="text-secondary">
+                  <i class="fas fa-retweet mr-2"></i>
+                  {{userLogado == tweet?.userRetweet?.nick ? 'Você' : tweet?.userRetweet?.name }} retweetou
+                </span>
+              </div>
+            </div>
+            <div class="row my-3" style="padding-left: 10px">
+              <div style="padding: 0px" class="col-md-1">
+                <img src="{{tweet?.user.imgProfile}}" alt="" style="width: 100%" class="rounded-circle mx-auto d-block img-fluid">
+              </div>
+              <div style="padding: 0px 10px 0px 10px" class="col-md-11">
+
+                <div *ngIf="tweet?.user.nick == userLogado" class="dropdown float-right text-secondary">
+                  <span class="fas fa-angle-down" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false"></span>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu">
+                    <button (click)="delete(tweet?.id)" class="dropdown-item" href="#">
+                      <span style="font-size: 14px" class="text-danger">
+                        <i class="fas fa-trash"></i>
+                        Apagar
+                      </span>
+                    </button>
+                  </div>
+                </div>
+
+                <span style="font-size: 14px">
+                  <strong>{{tweet?.user.name}}</strong>
+                  <span style="font-size: 14px" class="text-secondary"> @{{tweet?.user?.nick}} - {{tweet?.created_at |
+                    date:
+                    'hh:mm a MMM d, y'}}</span>
+                </span>
+                <br>
+                <span style="font-size: 14px">
+                  {{tweet?.content}}
+                </span>
+
+                <!-- <img *ngIf="tweet?.img" style="border-radius: 10px" class="mx-auto d-block img-fluid mt-2" src="{{tweet?.img}}"
+                  alt=""> -->
+
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="footer">
         <div class="row">
           <div class="col-md-12" style="background-color: #E8F5FD">
             <div style="font-size: 14px" class="mt-2">
               <span class="text-secondary">Em resposta a </span>
-              <span style="color: #1DA1F2">@{{tweet.user.nick}}</span>
-
+              <span style="color: #1DA1F2">@{{tweet?.user.nick}}</span>
             </div>
             <form (ngSubmit)="onSubmit();">
               <div class="input-group my-2">
-                <textarea autofocus id="textTweet" class="form-control text-primary"
-                  style="border-radius: 7px; resize: none" placeholder="Tweete sua resposta"></textarea>
+                <textarea autofocus id="textTweet" class="form-control text-primary" style="border-radius: 7px; resize: none"
+                  placeholder="Tweete sua resposta"></textarea>
               </div>
-
 
               <button style="height: 33px; background-color: #4AB3F4" class="btn text-white float-right rounded-pill px-3 mb-2 fontHelveticaBold"
                 type="submit">
