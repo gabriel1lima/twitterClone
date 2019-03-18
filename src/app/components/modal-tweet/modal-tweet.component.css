@@ -1,3 +1,11 @@
+.modal-lg {
+  max-width: 642px;
+}
+
+.bodyPadding {
+  padding: 30px 40px 30px 40px
+}
+
 .fontSize>span {
   font-size: 12px;
   font-weight: bold

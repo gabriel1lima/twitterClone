@@ -8,7 +8,7 @@
         "imgProfile": "https://avatars2.githubusercontent.com/u/41576660?s=400&u=b4e5b1e4a5b7ed4a51d7fe91061921e9fc014fba&v=4"
       },
       "content": "Lorem ipsum primis lectus ut nec quis enim accumsan nam mollis",
-      "comments": 130,
+      "comments": [],
       "retweets": 40,
       "likes": 0,
       "img": "https://pbs.twimg.com/media/D1fzFlZW0AEiXVF.jpg",
@@ -23,7 +23,7 @@
         "imgProfile": "https://randomuser.me/api/portraits/men/60.jpg"
       },
       "content": "Lorem ipsum primis lectus ut nec quis enim accumsan nam mollis facilisis etiam sollicitudin imperdiet, lacus eget quis sodales libero blandit egestas faucibus nam proin rhoncus elementum. dapibus erat suscipit suspendisse augue sapien massa inceptos felis tempor nibh pharetra, sollicitudin sociosqu ultricies nec a vitae orci netus egestas vivamus, orci consectetur vivamus convallis aenean euismod aptent ornare placerat mattis.",
-      "comments": 125,
+      "comments": [],
       "retweets": 27,
       "likes": 0,
       "img": "",
@@ -38,7 +38,7 @@
         "imgProfile": "https://avatars2.githubusercontent.com/u/41576660?s=400&u=b4e5b1e4a5b7ed4a51d7fe91061921e9fc014fba&v=4"
       },
       "content": "Felis tempor nibh pharetra, sollicitudin sociosqu ultricies nec dapibus erat suscipit suspendisse augue sapien massa inceptos",
-      "comments": 0,
+      "comments": [],
       "retweets": 0,
       "likes": 0,
       "img": "",
@@ -53,12 +53,63 @@
         "imgProfile": "https://randomuser.me/api/portraits/men/60.jpg"
       },
       "content": "Dapibus erat suscipit suspendisse augue sapien massa inceptos felis tempor nibh pharetra, sollicitudin sociosqu ultricies nec",
-      "comments": 0,
+      "comments": [
+        {
+          "user": {
+            "id": 0,
+            "name": "Gabriel Lima",
+            "nick": "GabrielLima56",
+            "imgProfile": "https://avatars2.githubusercontent.com/u/41576660?s=400&u=b4e5b1e4a5b7ed4a51d7fe91061921e9fc014fba&v=4"
+          },
+          "content": "Este é um comentário!"
+        },
+        {
+          "user": {
+            "id": 0,
+            "name": "Gabriel Lima",
+            "nick": "GabrielLima56",
+            "imgProfile": "https://avatars2.githubusercontent.com/u/41576660?s=400&u=b4e5b1e4a5b7ed4a51d7fe91061921e9fc014fba&v=4"
+          },
+          "content": "Outro comentário"
+        }
+      ],
       "retweets": 0,
       "likes": 1,
       "img": "",
       "created_at": "2019-03-14T01:50:10.522Z",
       "id": 4
+    },
+    {
+      "user": {
+        "id": 1,
+        "name": "Lorran Cayck",
+        "nick": "cayck-lorran",
+        "imgProfile": "https://randomuser.me/api/portraits/men/60.jpg"
+      },
+      "content": "Lorem ipsum primis lectus ut nec quis enim accumsan nam mollis facilisis etiam sollicitudin imperdiet, lacus eget quis sodales libero blandit egestas faucibus nam proin rhoncus elementum. dapibus erat suscipit suspendisse augue sapien massa inceptos felis tempor nibh pharetra, sollicitudin sociosqu ultricies nec a vitae orci netus egestas vivamus, orci consectetur vivamus convallis aenean euismod aptent ornare placerat mattis.",
+      "comments": [
+        {
+          "user": {
+            "id": 0,
+            "name": "Gabriel Lima",
+            "nick": "GabrielLima56",
+            "imgProfile": "https://avatars2.githubusercontent.com/u/41576660?s=400&u=b4e5b1e4a5b7ed4a51d7fe91061921e9fc014fba&v=4"
+          },
+          "content": "ihihohiiooi"
+        }
+      ],
+      "retweets": 28,
+      "likes": 1,
+      "img": "",
+      "created_at": "2019-03-18T13:30:42.353Z",
+      "id": 5,
+      "retweet": true,
+      "userRetweet": {
+        "id": 0,
+        "name": "Gabriel Lima",
+        "nick": "GabrielLima56",
+        "imgProfile": "https://avatars2.githubusercontent.com/u/41576660?s=400&u=b4e5b1e4a5b7ed4a51d7fe91061921e9fc014fba&v=4"
+      }
     }
   ],
   "users": [

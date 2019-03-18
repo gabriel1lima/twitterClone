@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-
+declare var $: any
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
@@ -11,6 +11,7 @@ export class NavBarComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    $('#modalTweet').modal('toggle');
   }
-
+  
 }

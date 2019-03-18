@@ -11,6 +11,7 @@ import { NavBarComponent } from "./components/nav-bar/nav-bar.component";
 import { LoginComponent } from "./components/login/login.component";
 import { CardProfileComponent } from "./components/card-profile/card-profile.component";
 import { ModalCommentComponent } from "./components/modal-comment/modal-comment.component";
+import { ModalTweetComponent } from './components/modal-tweet/modal-tweet.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ModalCommentComponent } from "./components/modal-comment/modal-comment.
     NavBarComponent,
     LoginComponent,
     CardProfileComponent,
-    ModalCommentComponent
+    ModalCommentComponent,
+    ModalTweetComponent
   ],
   imports: [
     BrowserModule,

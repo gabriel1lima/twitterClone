@@ -68,9 +68,9 @@
               <span class="text-secondary">Em resposta a </span>
               <span style="color: #1DA1F2">@{{tweet?.user.nick}}</span>
             </div>
-            <form (ngSubmit)="onSubmit();">
+            <form (ngSubmit)="onSubmit(textTweetComment.value);">
               <div class="input-group my-2">
-                <textarea autofocus id="textTweet" class="form-control text-primary" style="border-radius: 7px; resize: none"
+                <textarea autofocus #textTweetComment class="form-control text-primary" style="border-radius: 7px; resize: none"
                   placeholder="Tweete sua resposta"></textarea>
               </div>
 

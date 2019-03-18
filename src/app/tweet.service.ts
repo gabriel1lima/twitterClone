@@ -41,8 +41,8 @@ export class TweetService {
       .pipe(tap(_ => console.log("create retweet")));
   }
 
-  /* PUT - Da like em tweet */
-  likeTweet(tweet: object): Observable<any> {
+  /* PUT - Atualiza tweet (like, comment)*/
+  updateTweet(tweet: object): Observable<any> {
     return this.http
       .put(this.baseUrlFeed + `/${tweet["id"]}`, tweet, this.httpOptions)
       .pipe(tap(_ => console.log("create tweet")));

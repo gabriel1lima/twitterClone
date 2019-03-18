@@ -1,4 +1,4 @@
-<div class="row justify-content-center">
+<div style="cursor: pointer;" class="row justify-content-center">
   <div class="col-md-12 border-top bg-white">
     <div *ngIf="tweet.retweet" class="row justify-content-center">
       <div style="padding: 5px 0px 0px 0px" class="col-md-12">
@@ -44,7 +44,7 @@
 
             <span class="mr-5 commentHover" data-toggle="modal" (click)='modalChanged()' [attr.data-target]="'#' + tweet.user?.nick + tweet?.id">
               <i class="far fa-comment mr-1"></i>
-              {{tweet.comments || ''}}
+              {{tweet.comments?.length || ''}}
             </span>
 
             <span (click)="retweet()" class="mr-5 retweetHover {{tweet.retweet ? (userLogado == tweet.userRetweet?.nick ? 'retweet' : '') : ''}}">

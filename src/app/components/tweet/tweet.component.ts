@@ -29,7 +29,7 @@ export class TweetComponent implements OnInit {
   like(): void {
     var tweet = this.tweet;
     tweet["likes"] += 1;
-    this.tweetService.likeTweet(tweet).subscribe(_ => this.feed.getFeed());
+    this.tweetService.updateTweet(tweet).subscribe(_ => this.feed.getFeed());
   }
 
   sendCreateRetweet(tweet: object): void {

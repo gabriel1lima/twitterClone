@@ -1,0 +1,89 @@
+<!-- Modal -->
+<div class="modal fade" id="modalTweet" tabindex="-1" role="dialog" [attr.aria-labelledby]="modalTweet" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content">
+
+      <div class="bodyPadding">
+        <div class="row justify-content-center">
+          <div class="col-md-12 bg-white">
+            <div class="row" style="padding-left: 10px;">
+              <div style="padding: 0px" class="col-md-1">
+                <img src="{{tweet?.user.imgProfile}}" alt="" style="width: 100%" class="rounded-circle mx-auto d-block img-fluid">
+              </div>
+              <div style="padding: 0px 10px 0px 10px" class="col-md-11">
+                <span style="font-size: 18px">
+                  <strong>{{tweet?.user.name}}</strong>
+                </span>
+                <div style="position: absolute; top: 23px">
+                  <span style="font-size: 14px;" class="text-secondary">@{{tweet?.user?.nick}}</span>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-2">
+              <div class="col-md-12">
+                <span style="font-size: 27px; font-weight: 400">
+                  {{tweet?.content}}
+                </span> <br>
+
+                <img *ngIf="tweet?.img" style="border-radius: 10px" class="mx-auto d-block img-fluid mt-2" src="{{tweet?.img}}"
+                  alt="">
+
+                <div class="mt-2">
+                  <span style="font-size: 14px" class="text-secondary">{{tweet?.created_at | date: 'hh:mm a MMM d,
+                    y'}}</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-2" style="padding: 0px; margin-left: 0.09rem!important; margin-right: 0.09rem!important">
+              <div class="col-md-4 py-2 border-top border-bottom border-right p-0">
+                <span style="font-size: 14px; font-weight: 700">{{tweet.retweets}} </span>
+                <span style="font-size: 14px; font-weight: 400" class="text-secondary mr-2">Retweets</span>
+
+                <span style="font-size: 14px; font-weight: 700">{{tweet.likes}} </span>
+                <span style="font-size: 14px; font-weight: 400" class="text-secondary">Curtidas</span>
+              </div>
+              <div class="col-md-8 py-2 border-top border-bottom p-0">
+                <img src="{{tweet?.user.imgProfile}}" alt="" style="height: 24px" class="ml-2 rounded-circle img-fluid">
+              </div>
+            </div>
+
+            <div class="row mt-2">
+              <div class="col-md-12 text-secondary fontSize">
+
+                <span class="mr-5 commentHover" data-toggle="modal" (click)='modalChanged()' [attr.data-target]="'#' + tweet.user?.nick + tweet?.id">
+                  <i class="far fa-comment mr-1"></i>
+                  {{tweet.comments?.length || ''}}
+                </span>
+
+                <span (click)="retweet()" class="mr-5 retweetHover {{tweet.retweet ? (userLogado == tweet.userRetweet?.nick ? 'retweet' : '') : ''}}">
+                  <i class="fas fa-retweet mr-1"></i>
+                  {{tweet.retweets || ''}}
+                </span>
+
+                <span (click)="like()" class="mr-5 likeHover {{tweet.likes && 'like'}}">
+                  <i class="{{tweet.likes ? 'fas' : 'far'}} fa-heart mr-1"></i>
+                  {{tweet.likes || ''}}
+                </span>
+
+                <span class="mr-5 commentHover">
+                  <i class="far fa-envelope mr-1"></i>
+                </span>
+              </div>
+            </div>
+
+            <p *ngFor="let comment of tweet.comments">{{comment.content}}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12" style="background-color: red;">
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>

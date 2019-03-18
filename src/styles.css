@@ -10,6 +10,26 @@
   /* color: #1da1f2 */
 }
 
+.likeHover:hover {
+  color: #E34073
+}
+
+.like {
+  color: #E34073;
+}
+
+.commentHover:hover {
+  color: #1da1f2;
+}
+
+.retweetHover:hover {
+  color: #17bf63;
+}
+
+.retweet {
+  color: #17bf63;
+}
+
 span {
   font-family: "Helvetica";
 }
