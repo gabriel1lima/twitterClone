@@ -52,17 +52,17 @@
             <div class="row mt-2">
               <div class="col-md-12 text-secondary fontSize">
 
-                <span class="mr-5 commentHover" data-toggle="modal" (click)='modalChangedComment()' [attr.data-target]="'#' + tweet?.user?.nick + tweet?.id">
+                <span class="mr-5 commentHover">
                   <i class="far fa-comment mr-1"></i>
                   {{tweet?.comments?.length || ''}}
                 </span>
 
-                <span (click)="retweet()" class="mr-5 retweetHover {{tweet?.retweet ? (userLogado == tweet?.userRetweet?.nick ? 'retweet' : '') : ''}}">
+                <span class="mr-5 retweetHover {{tweet?.retweet ? (userLogado == tweet?.userRetweet?.nick ? 'retweet' : '') : ''}}">
                   <i class="fas fa-retweet mr-1"></i>
                   {{tweet?.retweets || ''}}
                 </span>
 
-                <span (click)="like()" class="mr-5 likeHover {{tweet?.likes && 'like'}}">
+                <span class="mr-5 likeHover {{tweet?.likes && 'like'}}">
                   <i class="{{tweet?.likes ? 'fas' : 'far'}} fa-heart mr-1"></i>
                   {{tweet?.likes || ''}}
                 </span>

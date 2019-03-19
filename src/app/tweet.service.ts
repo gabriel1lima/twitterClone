@@ -45,15 +45,14 @@ export class TweetService {
   updateTweet(tweet: object): Observable<any> {
     return this.http
       .put(this.baseUrlFeed + `/${tweet["id"]}`, tweet, this.httpOptions)
-      .pipe(tap(_ => console.log("create tweet")));
+      .pipe(tap(_ => console.log("create like/comment")));
   }
 
   /* DELETE - Apaga um tweet */
   deleteTweet(idTweet: number): Observable<any> {
-    return this.http.delete(this.baseUrlFeed + `/${idTweet}`)
-      .pipe(
-        tap(_ => console.log("delete tweet")),
-      )
+    return this.http
+      .delete(this.baseUrlFeed + `/${idTweet}`)
+      .pipe(tap(_ => console.log("delete tweet")));
   }
 
   constructor(private http: HttpClient) {}
