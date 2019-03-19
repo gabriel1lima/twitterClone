@@ -1,3 +1,7 @@
+::placeholder {
+  font-size: 14px;
+  font-family: "Helvetica";
+}
 .modal-lg {
   max-width: 642px;
 }

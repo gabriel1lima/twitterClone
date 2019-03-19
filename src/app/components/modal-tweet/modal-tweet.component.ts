@@ -7,10 +7,15 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ModalTweetComponent implements OnInit {
   @Input() tweet: object;
+  @Input() userLogado: object;
   
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onSubmit(){
+
   }
 
 }
