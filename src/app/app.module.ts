@@ -12,6 +12,7 @@ import { LoginComponent } from "./components/login/login.component";
 import { CardProfileComponent } from "./components/card-profile/card-profile.component";
 import { ModalCommentComponent } from "./components/modal-comment/modal-comment.component";
 import { ModalTweetComponent } from './components/modal-tweet/modal-tweet.component';
+import { TweetCommentComponent } from './components/tweet-comment/tweet-comment.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ModalTweetComponent } from './components/modal-tweet/modal-tweet.compon
     LoginComponent,
     CardProfileComponent,
     ModalCommentComponent,
-    ModalTweetComponent
+    ModalTweetComponent,
+    TweetCommentComponent
   ],
   imports: [
     BrowserModule,

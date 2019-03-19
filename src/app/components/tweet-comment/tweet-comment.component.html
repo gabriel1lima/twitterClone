@@ -1,0 +1,51 @@
+<div class="row" style="padding: 0px 15px 0px 15px">
+  <div class="col-md-12 border-top" style="padding: 0px 40px 0px 40px;">
+    <div class="row my-2" style="padding-left: 10px">
+      <div style="padding: 0px" class="col-md-1">
+        <img src="{{comment?.user.imgProfile}}" alt="" style="width: 100%" class="rounded-circle mx-auto d-block img-fluid">
+      </div>
+      <div style="padding: 0px 10px 0px 10px" class="col-md-11">
+        <span style="font-size: 14px">
+          <strong>{{comment?.user?.name}}</strong>
+          <span style="font-size: 14px" class="text-secondary"> @{{comment?.user?.nick}} - 0 h</span>
+        </span>
+
+        <div style="font-size: 14px">
+          <span class="text-secondary">Em resposta a </span>
+          <span style="color: #1DA1F2">@{{userResponse?.nick}}</span>
+        </div>
+
+        <span style="font-size: 14px">
+          {{comment.content}}
+        </span>
+
+        <!-- <img *ngIf="tweet.img" style="border-radius: 10px" class="mx-auto d-block img-fluid mt-2" src="{{tweet.img}}"
+          alt=""> -->
+
+        <div class="row mt-2">
+          <div class="col-md-12 text-secondary fontSize">
+
+            <span class="mr-5 commentHover" data-toggle="modal">
+              <i class="far fa-comment mr-1"></i>
+              <!-- {{tweet.comments?.length || ''}} -->
+            </span>
+
+            <span class="mr-5 retweetHover">
+              <i class="fas fa-retweet mr-1"></i>
+              <!-- {{tweet.retweets || ''}} -->
+            </span>
+
+            <span class="mr-5 likeHover">
+              <i class="far fa-heart mr-1"></i>
+              <!-- {{tweet.likes || ''}} -->
+            </span>
+
+            <span class="mr-5 commentHover">
+              <i class="far fa-envelope mr-1"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,9 +1,9 @@
 <!-- Modal -->
 <div class="modal fade" id="modalTweet" tabindex="-1" role="dialog" [attr.aria-labelledby]="modalTweet" aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-    <div class="modal-content">
+    <div class="modal-content" style="overflow: hidden;">
 
-      <div class="bodyPadding">
+      <div class="modal-body">
         <div class="row justify-content-center">
           <div class="col-md-12 bg-white">
             <div class="row" style="padding-left: 10px;">
@@ -71,18 +71,11 @@
                 </span>
               </div>
             </div>
-
-            <p *ngFor="let comment of tweet.comments">{{comment.content}}</p>
           </div>
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-md-12" style="background-color: red;">
-
-        </div>
-
-      </div>
+      <app-tweet-comment *ngFor="let comment of tweet.comments" [userResponse]="tweet?.user" [comment]="comment"></app-tweet-comment>
 
     </div>
   </div>
