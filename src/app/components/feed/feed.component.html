@@ -11,10 +11,11 @@
 
     <div class="col-md-6">
       <app-new-tweet [user]="user"></app-new-tweet>
-      <app-tweet (modalChange)='emitterTweet($event)' *ngFor="let tweet of feed" [tweet]="tweet"></app-tweet>
+      <app-tweet (modalChangeComment)='emitterTweetComment($event)' (modalChangeTweet)='emitterTweet($event)' *ngFor="let tweet of feed"
+        [tweet]="tweet"></app-tweet>
 
-      <app-modal-comment [tweet]="tweetModal"></app-modal-comment>
-      <app-modal-tweet [tweet]="feed[1]"></app-modal-tweet>
+      <app-modal-comment [tweet]="tweetModalComment"></app-modal-comment>
+      <app-modal-tweet [tweet]="tweetModal"></app-modal-tweet>
     </div>
 
     <div class="col-md-3">

@@ -3,11 +3,16 @@
 .container {
   max-width: 1200px;
 }
+
 .fontHelveticaBold {
   font-family: 'Helvetica Neue Bold';
   font-weight: bold;
   font-size: 13px;
   /* color: #1da1f2 */
+}
+
+.rowHover:hover {
+  background-color: #F5F8FA;
 }
 
 .likeHover:hover {

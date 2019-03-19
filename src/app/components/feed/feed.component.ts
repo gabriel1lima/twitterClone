@@ -9,7 +9,8 @@ import { TweetService } from "../../tweet.service";
 export class FeedComponent implements OnInit {
   feed: [];
   user: {};
-  tweetModal: {}
+  tweetModalComment: {};
+  tweetModal: {};
 
   constructor(private tweetService: TweetService) {}
 
@@ -25,12 +26,16 @@ export class FeedComponent implements OnInit {
     return localStorage.getItem("@cloneTwitter:username");
   }
 
-  emitterTweet(event){
+  emitterTweetComment(event) {
+    this.tweetModalComment = event;
+  }
+
+  emitterTweet(event) {
     this.tweetModal = event;
   }
 
   getUser(): void {
-    var nick = this.getUserStorage()
+    var nick = this.getUserStorage();
     this.tweetService
       .getUser(nick)
       .subscribe(user => ((this.user = user[0]), this.getFeed()));

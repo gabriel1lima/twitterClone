@@ -7,14 +7,19 @@ import { FeedComponent } from "../feed/feed.component";
   styleUrls: ["./tweet.component.css"]
 })
 export class TweetComponent implements OnInit {
-  @Input() tweet: object;
   userLogado: string;
+  @Input() tweet: object;
   @Input() isComment: boolean = false;
 
-  @Output() modalChange = new EventEmitter();
+  @Output() modalChangeComment = new EventEmitter();
+  @Output() modalChangeTweet = new EventEmitter();
   
-  modalChanged(){
-    this.modalChange.emit(this.tweet);
+  modalChangedComment(){
+    this.modalChangeComment.emit(this.tweet);
+  }
+
+  modalChangedTweet(){
+    this.modalChangeTweet.emit(this.tweet);
   }
 
   ngOnInit() {
