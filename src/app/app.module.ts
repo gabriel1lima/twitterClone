@@ -15,6 +15,7 @@ import { ModalTweetComponent } from './components/modal-tweet/modal-tweet.compon
 import { TweetCommentComponent } from './components/tweet-comment/tweet-comment.component';
 import { TrendItemComponent } from './components/trend-item/trend-item.component';
 import { NumberFormat } from './pipes/number-format.pipe';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { NumberFormat } from './pipes/number-format.pipe';
     ModalTweetComponent,
     TweetCommentComponent,
     TrendItemComponent,
-    NumberFormat
+    NumberFormat,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

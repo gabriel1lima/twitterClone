@@ -1,0 +1,24 @@
+<div class="register-wrapper">
+  <div class="card" style="width: 25rem;">
+    <div class="card-body text-center" style="padding: 35px">
+      
+      <i style="color: #4AB3F4" class="fab fa-twitter fa-4x"></i>
+
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <input formControlName="name" type="text" class="form-control mt-3" placeholder="Nome e sobrenome">
+          <input formControlName="nick" type="text" class="form-control mt-3" placeholder="username">
+          <input formControlName="imgProfile" type="text" class="form-control mt-3" placeholder="URL da imagem. Ex: https://site.com.br/uploads/2018/03/user.png">
+
+          <button [disabled]="!registerForm.valid" type="submit" class="btn text-white mt-3" style="background-color: #4AB3F4; width: 100%">
+            Cadastrar
+          </button>
+
+          <small id="emailHelp" class="form-text text-muted mt-2">
+            <a routerLink="/login">Login</a>
+          </small>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
