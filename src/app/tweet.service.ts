@@ -55,5 +55,15 @@ export class TweetService {
       .pipe(tap(_ => console.log("delete tweet")));
   }
 
+  /* GET - Trends */
+  getTrends(): Observable<any> {
+    const httpOptions = {
+      headers: new HttpHeaders({ 'Authorization': 'OAuth oauth_consumer_key="uZrmVFcXMYIMX8uxXFbBxd2Xp",oauth_token="473873041-z5hobsjWsz0QovzwTD85K0G5EelKwIpMkVIoFAXs",oauth_signature_method="HMAC-SHA1",oauth_timestamp="1553085401",oauth_nonce="qTzxHDMg69v",oauth_version="1.0",oauth_signature="sJ%2BReU5bfaUOIl2tcHHatACHieA%3D"' })
+    };
+    return this.http
+      .get("/api/1.1/trends/place.json?id=23424768", httpOptions)
+      .pipe(tap(_ => console.log("get trends")));
+  }
+
   constructor(private http: HttpClient) {}
 }
