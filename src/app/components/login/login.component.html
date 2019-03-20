@@ -1,9 +1,23 @@
 <div class="login-wrapper">
-  <i style="color: #4AB3F4" class="fab fa-twitter fa-3x"></i>
+  <div class="card" style="width: 25rem; height: 18rem;">
+    <div class="card-body text-center" style="padding: 35px">
+      <i style="color: #4AB3F4" class="fab fa-twitter fa-4x"></i>
 
-  <form>
-    <input #username placeholder="Nome do Usuário" />
+      <form>
+        <div class="form-group">
+          <input #username type="email" class="form-control mt-3" id="exampleInputEmail1" aria-describedby="emailHelp"
+            placeholder="@username">
 
-    <button (click)="login(username.value)">Entrar</button>
-  </form>
+          <button class="btn text-white mt-3" style="background-color: #4AB3F4; width: 100%"
+            (click)="login(username.value)">
+            Entrar
+          </button>
+
+          <small id="emailHelp" class="form-text text-muted mt-2">
+            <a href="">Registre-se</a>
+          </small>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>
