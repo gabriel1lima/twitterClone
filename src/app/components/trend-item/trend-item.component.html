@@ -1,0 +1,9 @@
+<div class="row {{trend?.tweet_volume ? 'mb-3' : ''}}">
+  <div class="col-md-12">
+    <a href="{{trend?.url}}" style="font-weight: 700; font-size: 14px; color: #1da1f2">{{trend?.name}}</a>
+    <div *ngIf="trend?.tweet_volume" style="position: absolute; top: 15px">
+      <span class="text-secondary" style="font-size: 12px;">{{trend?.tweet_volume | numberFormat : 1}} Tweets</span>
+    </div>
+  </div>
+</div>
+<!-- {name: "#StrangerThings3", url: "http://twitter.com/search?q=%23StrangerThings3", promoted_content: null, query: "%23StrangerThings3", tweet_volume: 115244} -->
