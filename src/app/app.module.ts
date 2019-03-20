@@ -13,6 +13,8 @@ import { CardProfileComponent } from "./components/card-profile/card-profile.com
 import { ModalCommentComponent } from "./components/modal-comment/modal-comment.component";
 import { ModalTweetComponent } from './components/modal-tweet/modal-tweet.component';
 import { TweetCommentComponent } from './components/tweet-comment/tweet-comment.component';
+import { TrendItemComponent } from './components/trend-item/trend-item.component';
+import { NumberFormat } from './pipes/number-format.pipe';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { TweetCommentComponent } from './components/tweet-comment/tweet-comment.
     CardProfileComponent,
     ModalCommentComponent,
     ModalTweetComponent,
-    TweetCommentComponent
+    TweetCommentComponent,
+    TrendItemComponent,
+    NumberFormat
   ],
   imports: [
     BrowserModule,
