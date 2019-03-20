@@ -11,6 +11,7 @@ export class FeedComponent implements OnInit {
   user: {};
   tweetModalComment: {};
   tweetModal: {};
+  trends: {}
 
   constructor(private tweetService: TweetService) {}
 
@@ -19,7 +20,11 @@ export class FeedComponent implements OnInit {
   }
 
   getFeed(): void {
-    this.tweetService.getFeed().subscribe(feed => (this.feed = feed));
+    this.tweetService.getFeed().subscribe(feed => ((this.feed = feed), this.getTrends()));
+  }
+
+  getTrends(): void{
+    this.tweetService.getTrends().subscribe(res => (this.trends = res[0]['trends'].slice(0,9)))
   }
 
   getUserStorage(): string {
