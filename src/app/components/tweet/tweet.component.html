@@ -39,8 +39,10 @@
           </span>
         </div>
 
-        <img *ngIf="tweet?.img" style="border-radius: 10px" class="mx-auto d-block img-fluid mt-2" src="{{tweet?.img}}"
-          alt="">
+        <div style="cursor: pointer" (click)="modalChangedTweet()" data-toggle="modal" [attr.data-target]="'#tweet' + tweet?.user?.nick + tweet?.id">
+          <img *ngIf="tweet?.img" style="border-radius: 10px" class="mx-auto d-block img-fluid mt-2" src="{{tweet?.img}}"
+            alt="">
+        </div>
 
         <div class="row mt-2" style="cursor: pointer">
           <div class="col-md-12 text-secondary fontSize">
