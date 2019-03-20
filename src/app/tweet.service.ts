@@ -27,6 +27,12 @@ export class TweetService {
       .pipe(tap(_ => console.log("get user")));
   }
 
+  addUser(user: object): Observable<any> {
+    return this.http
+      .post(this.baseUrlUser, user, this.httpOptions)
+      .pipe(tap(_ => console.log("create user")))
+  }
+
   /* POST - Cria tweet */
   createTweet(tweet: object): Observable<any> {
     return this.http

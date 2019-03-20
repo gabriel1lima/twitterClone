@@ -5,8 +5,8 @@
 
       <form>
         <div class="form-group">
-          <input #username type="email" class="form-control mt-3" id="exampleInputEmail1" aria-describedby="emailHelp"
-            placeholder="@username">
+          <input #username type="text" class="form-control mt-3" id="exampleInputEmail1" aria-describedby="emailHelp"
+            placeholder="username">
 
           <button class="btn text-white mt-3" style="background-color: #4AB3F4; width: 100%"
             (click)="login(username.value)">
@@ -14,8 +14,10 @@
           </button>
 
           <small id="emailHelp" class="form-text text-muted mt-2">
-            <a href="">Registre-se</a>
+            <a routerLink="/register">Registre-se</a>
           </small>
+
+          <span *ngIf="msg" style="color: red; font-size: 12px">{{msg}}</span>
         </div>
       </form>
     </div>
