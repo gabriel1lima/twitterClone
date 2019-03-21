@@ -37,13 +37,18 @@ export class NewTweetComponent implements OnInit {
       img: [""],
       comments: [0],
       retweets: [0],
-      likes: [0],
-      created_at: new Date()
+      likes: [0]
     });
   }
 
   onSubmit() {
-    const tweet = { ...this.tweetForm.value, ...{ user: this.user } };
+    this.flagDesabledButton = false;
+
+    const tweet = {
+      ...this.tweetForm.value,
+      ...{ user: this.user },
+      created_at: new Date()
+    };
 
     this.tweetService
       .createTweet(tweet)
@@ -51,17 +56,14 @@ export class NewTweetComponent implements OnInit {
   }
 
   clearInputs() {
-    $("#textTweet").val("");
-    $("#urlImagem").val("");
+    this.tweetForm.reset();
+
     $("#textTweet").css("height", "");
-    this.clickInputText();
+    this.flagInputImgButton = false;
   }
 
   clickInputText() {
-    if (this.cond) {
-      this.flagInputImgButton = !this.flagInputImgButton;
-      this.cond = false;
-    }
+    this.flagInputImgButton = true;
   }
 
   blurInputText() {
@@ -69,7 +71,6 @@ export class NewTweetComponent implements OnInit {
   }
 
   clickButtonImagem() {
-    this.cond = true;
     this.clickInputText();
     $("#textTweet").css("height", "100px");
   }
