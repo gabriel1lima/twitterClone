@@ -1,0 +1,108 @@
+{
+  "feed": [{
+      "user": {
+        "id": 0,
+        "name": "Gabriel Lima",
+        "nick": "GabrielLima56",
+        "imgProfile": "https://avatars2.githubusercontent.com/u/41576660?s=400&u=b4e5b1e4a5b7ed4a51d7fe91061921e9fc014fba&v=4"
+      },
+      "content": "Lorem ipsum primis lectus ut nec quis enim accumsan nam mollis",
+      "comments": [],
+      "retweets": 40,
+      "likes": 0,
+      "img": "https://pbs.twimg.com/media/D1fzFlZW0AEiXVF.jpg",
+      "created_at": "2019-03-14T01:19:55.016Z",
+      "id": 0
+    },
+    {
+      "user": {
+        "id": 1,
+        "name": "Lorran Cayck",
+        "nick": "cayck-lorran",
+        "imgProfile": "https://randomuser.me/api/portraits/men/60.jpg"
+      },
+      "content": "Lorem ipsum primis lectus ut nec quis enim accumsan nam mollis facilisis etiam sollicitudin imperdiet, lacus eget quis sodales libero blandit egestas faucibus nam proin rhoncus elementum. dapibus erat suscipit suspendisse augue sapien massa inceptos felis tempor nibh pharetra.",
+      "comments": [{
+        "user": {
+          "id": 0,
+          "name": "Gabriel Lima",
+          "nick": "GabrielLima56",
+          "imgProfile": "https://avatars2.githubusercontent.com/u/41576660?s=400&u=b4e5b1e4a5b7ed4a51d7fe91061921e9fc014fba&v=4"
+        },
+        "content": "Lorem ipsum nullam diam eget duis per suscipit vel luctus risus potenti elementum cras, elementum dolor etiam gravida taciti aptent netus torquent consequat mattis risus. "
+      }],
+      "retweets": 27,
+      "likes": 0,
+      "img": "",
+      "created_at": "2019-03-14T01:19:50.016Z",
+      "id": 1
+    },
+    {
+      "user": {
+        "id": 0,
+        "name": "Gabriel Lima",
+        "nick": "GabrielLima56",
+        "imgProfile": "https://avatars2.githubusercontent.com/u/41576660?s=400&u=b4e5b1e4a5b7ed4a51d7fe91061921e9fc014fba&v=4"
+      },
+      "content": "Felis tempor nibh pharetra, sollicitudin sociosqu ultricies nec dapibus erat suscipit suspendisse augue sapien massa inceptos",
+      "comments": [],
+      "retweets": 0,
+      "likes": 0,
+      "img": "",
+      "created_at": "2019-03-14T01:44:49.674Z",
+      "id": 3
+    },
+    {
+      "user": {
+        "id": 1,
+        "name": "Lorran Cayck",
+        "nick": "cayck-lorran",
+        "imgProfile": "https://randomuser.me/api/portraits/men/60.jpg"
+      },
+      "content": "Dapibus erat suscipit suspendisse augue sapien massa inceptos felis tempor nibh pharetra, sollicitudin sociosqu ultricies nec",
+      "comments": [{
+          "user": {
+            "id": 0,
+            "name": "Gabriel Lima",
+            "nick": "GabrielLima56",
+            "imgProfile": "https://avatars2.githubusercontent.com/u/41576660?s=400&u=b4e5b1e4a5b7ed4a51d7fe91061921e9fc014fba&v=4"
+          },
+          "content": "Lorem ipsum magna congue dolor netus, pulvinar sed posuere netus senectus."
+        },
+        {
+          "user": {
+            "id": 0,
+            "name": "Gabriel Lima",
+            "nick": "GabrielLima56",
+            "imgProfile": "https://avatars2.githubusercontent.com/u/41576660?s=400&u=b4e5b1e4a5b7ed4a51d7fe91061921e9fc014fba&v=4"
+          },
+          "content": "Lorem ipsum nostra cubilia pulvinar semper cubilia augue etiam, gravida ipsum pulvinar pretium curabitur nostra."
+        }
+      ],
+      "retweets": 0,
+      "likes": 1,
+      "img": "",
+      "created_at": "2019-03-14T01:50:10.522Z",
+      "id": 4
+    }
+  ],
+  "users": [{
+      "name": "Gabriel Lima",
+      "nick": "GabrielLima56",
+      "imgProfile": "https://avatars2.githubusercontent.com/u/41576660?s=400&u=b4e5b1e4a5b7ed4a51d7fe91061921e9fc014fba&v=4",
+      "id": 0
+    },
+    {
+      "name": "Lorran Cayck",
+      "nick": "cayck-lorran",
+      "imgProfile": "https://randomuser.me/api/portraits/men/60.jpg",
+      "id": 1
+    },
+    {
+      "name": "Anderson Malheiro",
+      "nick": "malheiroanderson",
+      "imgProfile": "https://randomuser.me/api/portraits/men/63.jpg",
+      "id": 2
+    }
+  ]
+}

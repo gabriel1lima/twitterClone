@@ -1,14 +1,16 @@
 <div class="row">
   <div class="col-md-12" style="background-color: #E8F5FD">
-    <form (ngSubmit)="onSubmit();">
+    <form [formGroup]="tweetForm" (ngSubmit)="onSubmit();">
       <div class="input-group my-2 pl-3">
         <div class="input-group-prepend d-flex align-items-center mr-2">
           <img src="{{user?.imgProfile}}" alt="" style="height: 30px;" class="rounded-circle mx-auto d-block img-fluid">
         </div>
 
-        <textarea (blur)="blurInputText()" (click)="clickInputText()" rows="1" id="textTweet" class="form-control form-control-right text-primary"
-          style="border-bottom-left-radius: 7px; border-top-left-radius: 7px; resize: none" placeholder="O que está acontecendo?"></textarea>
-        <div *ngIf="!inputImage" class="input-group-append">
+        <textarea (input)="onInputChange($event.target.value)" formControlName="content" (blur)="blurInputText()" (click)="clickInputText()" rows="1" id="textTweet"
+          class="form-control form-control-right text-primary"
+          style="border-bottom-left-radius: 7px; border-top-left-radius: 7px; resize: none"
+          placeholder="O que está acontecendo?"></textarea>
+        <div *ngIf="!flagInputImgButton" class="input-group-append">
           <span (click)="clickButtonImagem()" style="border-bottom-right-radius: 7px; border-top-right-radius: 7px"
             class="input-group-text bg-white">
             <i class="far fa-images text-primary"></i>
@@ -16,16 +18,21 @@
         </div>
       </div>
 
-      <div *ngIf="inputImage" class="input-group mb-2" style="padding-left: 3.4rem!important;">
+      <div *ngIf="flagInputImgButton" class="input-group mb-2" style="padding-left: 3.4rem!important;">
         <div class="input-group-prepend">
           <span style="border-bottom-left-radius: 7px; border-top-left-radius: 7px" class="input-group-text bg-white">
             <i class="far fa-images text-primary"></i>
           </span>
         </div>
-        <input id="urlImagem" type="text" class="form-control form-control-left text-primary" style="border-bottom-right-radius: 7px; border-top-right-radius: 7px"
+        <input (input)="onInputChange($event.target.value)" formControlName="img" id="urlImagem" type="text" class="form-control form-control-left text-primary"
+          style="border-bottom-right-radius: 7px; border-top-right-radius: 7px"
           placeholder="URL da imagem. Ex: https://site.com.br/uploads/2018/03/carro.png">
       </div>
-      <button type="submit" style="display:none">hidden submit</button>
+
+      <button [disabled]="!flagDesabledButton || !tweetForm.valid" *ngIf="flagInputImgButton" style="height: 33px; background-color: #4AB3F4"
+        class="btn text-white float-right rounded-pill px-3 mb-2 fontHelveticaBold" type="submit">
+        Tweetar
+      </button>
     </form>
   </div>
 </div>
