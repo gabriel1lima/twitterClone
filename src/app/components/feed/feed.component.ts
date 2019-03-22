@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { TweetService } from "../../tweet.service";
+import { ActivatedRoute, Router } from "@angular/router";
 
 @Component({
   selector: "app-feed",
@@ -13,8 +14,12 @@ export class FeedComponent implements OnInit {
   tweetModal: {};
   trends: {}
 
-  constructor(private tweetService: TweetService) {}
-
+  constructor(private tweetService: TweetService, private router: Router) {
+    if (!localStorage.getItem("@cloneTwitter:username")){
+      this.router.navigate(['login'])
+    }
+  }
+  
   ngOnInit() {
     this.getUser();
   }

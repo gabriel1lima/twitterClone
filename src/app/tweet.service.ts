@@ -9,8 +9,8 @@ var configTwitter = require('../../configTwitter.json');
   providedIn: "root"
 })
 export class TweetService {
-  baseUrlFeed = "http://localhost:3000/feed";
-  baseUrlUser = "http://localhost:3000/users";
+  baseUrlFeed = "http://192.168.111.45:3000/feed";
+  baseUrlUser = "http://192.168.111.45:3000/users";
   httpOptions = {
     headers: new HttpHeaders({ "Content-Type": "application/json" })
   };
@@ -29,6 +29,7 @@ export class TweetService {
       .pipe(tap(_ => console.log("get user")));
   }
 
+  /* POST - Cria usuário */
   addUser(user: object): Observable<any> {
     return this.http
       .post(this.baseUrlUser, user, this.httpOptions)
