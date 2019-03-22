@@ -79,14 +79,14 @@
 
       <div class="row" style="padding: 0px 15px 0px 0px;">
         <div class="col-md-12 border-top" style="background-color: #F5F8FA; padding: 10px 40px 10px 40px;">
-          <form (ngSubmit)="onSubmit();">
+          <form (ngSubmit)="onSubmit(textCommentModalTweet.value); textCommentModalTweet.value = ''">
             <div class="input-group my-2 pl-3">
               <div class="input-group-prepend d-flex align-items-center mr-3">
                 <img src="{{userLogado?.imgProfile}}" alt="" style="height: 30px;" class="rounded-circle mx-auto d-block img-fluid">
               </div>
 
-              <textarea rows="1" id="textCommentModalTweet" class="form-control form-control-right text-primary" style="border-bottom-left-radius: 7px; border-top-left-radius: 7px; resize: none"
-                placeholder="Tweet sua resposta"></textarea>
+              <input #textCommentModalTweet class="form-control form-control-right text-primary" style="border-bottom-left-radius: 7px; border-top-left-radius: 7px; resize: none"
+                placeholder="Tweet sua resposta"/>
             </div>
             <button type="submit" style="display:none">hidden submit</button>
           </form>
